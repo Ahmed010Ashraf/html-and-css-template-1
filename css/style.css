@@ -1,0 +1,396 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Tilt Prism', sans-serif;
+font-family: 'Work Sans', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+.special-headding{
+    text-align: center;
+    font-size: 100px;
+    color: #ebeceb;
+    margin: 0;
+    
+}
+.special-headding + p{
+    text-align: center;
+    margin: -30px 0 0;
+    font-size: 20px;
+}
+@media (max-width: 768px){
+    .special-headding{
+        font-size: 70px;
+    }
+    .special-headding + p{
+        font-size: 15px;
+    }
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.links .shape{
+    display: flex;
+    flex-wrap: wrap;
+    width: 30px;
+    flex-direction: row-reverse;
+}
+.links .shape span:first-child{
+    width:100% ;
+    height: 3px;
+    background-color: green;
+    margin-bottom: 3px;
+}
+.links .shape span:nth-child(2){
+    width:50% ;
+    height: 3px;
+    background-color: green;
+    margin-bottom: 3px;
+    transition: .3s;
+}
+.links .shape span:last-child{
+    width:100% ;
+    height: 3px;
+    background-color: green;
+    margin-bottom: 3px;
+}
+.links:hover .shape span:nth-child(2){
+    width: 100%;
+}
+.header .links{
+    position: relative;
+}
+.links ul {
+    position : absolute;
+    right: 0;
+    top: 30px;
+    width: 150px;
+    background-color: #eee;
+    padding: 0;
+    margin: 0;
+    display: none;
+    transition: .3s;
+}
+.links ul li {
+    list-style: none;
+}
+.links ul li a{
+    display: block;
+    text-decoration: none;
+    color: rgb(23, 90, 87);
+    padding-bottom: 10px;
+    padding: 10px;
+    transition: .3s;
+}
+.links ul li a:hover {
+    margin-left: 20px;
+    border: 1px solid rgb(20, 255, 230);
+}
+.links ul::before{
+    content: '';
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #aaa transparent ;
+    right : 0;
+    top: -20px;
+}
+.links:hover ul{
+    display: block;
+    border: 1px solid goldenrod;
+}
+.landing{
+    background-image: url(../photos/Quill\ Creek\,\ Haines\ Junction\ -\ ©\ Olivier\ Du\ Tré.jpg);
+    background-size: cover;
+    height: calc(100vh - 50px);
+}
+.landing h1{
+    margin: 0;
+}
+.landing .text_lan {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    max-width: 100%;
+    color: white;
+    text-align: center;
+}
+.landing .text_lan p{
+    color: aqua;
+    font-size: 20px;
+    background-color: #1d1414b0;
+}
+.landing .text_lan p span {
+    color:#ffc300
+}
+.feature {
+    padding-bottom:60px;
+    padding-top: 60px;
+    background-color: #08000012;
+}
+.feature .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    text-align: center;
+    gap: 20px;
+}
+.feature .container .feat{
+    padding: 20px;
+}
+.feature .container .feat i{
+    font-size: 50px;
+    color: aqua;
+}
+.feature .container .feat h3{
+    font-weight: 800;
+}
+.feature .container .feat p {
+    color: #614a4a;
+    line-height: 1.6;
+}
+.services{
+    padding-bottom:60px;
+    padding-top: 60px;
+}
+.services .services-content{
+    margin: 60px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 30px;
+}
+.services .services-content img{
+    width: 300px;
+    height: 300px;
+}
+.services .services-content .column{
+    display: flex;
+    flex-direction: column;
+}
+.services .services-content .column .all{
+    display: flex;
+    margin-bottom: 10px;
+}
+.services .services-content .column .cont{
+    margin-top: -20px;
+    padding: 10px;
+}
+.services .services-content .column .all .cont h3{
+margin-top: 10px;
+}
+.services .services-content .column .all i{
+    font-size: 30px;
+}
+@media (max-width:767px){
+    .services .services-content .column .all{
+        flex-direction: column;
+        text-align: center;
+    }
+    .services .services-content .column .image{
+        text-align: center;
+    }
+    .services .services-content .column .cont{
+        margin-top: 0;
+    }
+}
+.services .services-content .column .image{
+    position: relative;
+}
+.services .services-content .column .image::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: calc(100% + 30px);
+    right: 0;
+    top: -15px;
+    background-color: red;
+    z-index: -1;
+}
+.protofolio {
+    background-color: #938d8d9e;
+   padding-top: 60px;
+    padding-bottom: 60px;
+}
+.protofolio .container .pro-cont {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+        gap: 20px;
+}
+.protofolio .container .pro-cont .card{
+    background-color: white;
+}
+.protofolio .container .pro-cont .card img{
+    
+    max-width: 100%;
+}
+.protofolio .container .pro-cont .card .info{
+    padding-left: 20px;
+}
+.protofolio .container .pro-cont .card .info h3 {
+    margin-top: 10px;
+}
+@media  (max-width:767px) {
+    .protofolio .container .pro-cont .card .info{
+        text-align: center;
+        padding: 0;
+    }
+}
+.about{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.about .container .cont {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.about .container .cont .col {
+    padding: 10px;
+    flex-basis: calc(100% - 500px);
+    position: relative;
+}
+.about .container .cont .col h3 {
+    font-weight: bold;
+    margin-bottom: 60px;
+    position: relative;
+    line-height: 1.6;
+}
+.about .container .cont .col h3::before{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    bottom: -50px;
+    left: 0;
+    background-color: aquamarine;
+}
+.about .container .cont .col2 img{
+    max-width: 100%;
+    width: 270px;
+    height: 370px;
+}
+.about .container .cont .col2{
+    position: relative;
+    width: 270px;
+    height: 370px;
+}
+.about .container .cont .col2::after{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 300px;
+    right: -150px;
+    top: -40px;
+    border-left: 80px solid maroon;
+    border-bottom: 80px solid maroon;
+    z-index: -1;
+}
+@media (max-width: 991px) {
+    .about .container .cont {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .about .container .cont .col2{
+        margin: 0 auto;
+    }
+    .about .container .cont .col h3::before{
+        left: 25%;
+    }
+}
+@media (max-width: 767px) {
+    .about .container .cont .col2::after{
+        display: none;
+    }
+}
+.contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: linear-gradient(rgb(80, 132, 80),transparent);
+}
+.contact .cont{
+    text-align: center;
+}
+.contact .cont h1{
+    font-size: 40px;
+    font-weight: 900;
+    color: black;
+}
+.contact .cont .spe{
+    font-size: 40px;
+    font-weight: 900;
+    color:rgb(51, 151, 151);
+}
+.contact .cont .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.contact .cont .icons a{
+    font-size: 20px;
+    margin-left: 10px;
+}
+@media  (max-width:767px) {
+    .contact .cont .spe,
+    .contact .cont h1{
+        font-size:25px
+    }
+}
+.footer{
+    background-color: rgb(63, 14, 14);
+    padding: 30px 10px;
+    text-align: center;
+    font-size: 20px;
+    color: aqua;
+}
+.footer span{
+    font-weight: 800;
+    color: aquamarine;
+}
+@media (max-width:767px) {
+    .foote{
+        font-size: 15px;
+    }
+    .footer span {
+        display: block;
+        padding: 10px;
+    }
+    
+}
